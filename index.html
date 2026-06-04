@@ -1,15 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Clothing Brand</title>
+    <title>DTek Clothing</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f5f5f5;
+        }
+
+        header{
+            background:black;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        nav{
+            background:#111;
+            text-align:center;
+            padding:15px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .hero{
+            text-align:center;
+            padding:80px 20px;
+            background:white;
+        }
+
+        .hero h1{
+            font-size:50px;
+        }
+
+        .hero p{
+            margin-top:15px;
+            font-size:20px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:25px;
+            padding:12px 25px;
+            background:black;
+            color:white;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .products{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+            padding:50px;
+        }
+
+        .card{
+            background:white;
+            width:250px;
+            padding:20px;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .card img{
+            width:100%;
+            border-radius:10px;
+        }
+
+        footer{
+            background:black;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome to My Clothing Brand</h1>
 
-    <p>Premium clothing for everyone.</p>
+<header>
+    <h1>DTEKTION</h1>
+    <p>Premium Streetwear</p>
+</header>
 
-    <h2>Featured Product</h2>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">Contact</a>
+</nav>
 
-    <p>Black Hoodie - ₦15,000</p>
+<section class="hero">
+    <h1>New Collection Out Now</h1>
+    <p>Elevate your style with Dtektion.</p>
+
+    <a class="btn" href="#">Shop Now</a>
+</section>
+
+<section class="products">
+
+    <div class="card">
+        <img src="https://via.placeholder.com/250">
+        <h3>Black Hoodie</h3>
+        <p>₦15,000</p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/250">
+        <h3>Graphic Tee</h3>
+        <p>₦8,000</p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/250">
+        <h3>Oversized Tee</h3>
+        <p>₦10,000</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Dtektion Clothing</p>
+</footer>
+
 </body>
 </html>
