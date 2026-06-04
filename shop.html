@@ -46,14 +46,15 @@
             padding:60px;
         }
 
+        /* 🔥 LONG VERTICAL CARDS */
         .card{
             background:white;
-            width:320px;
-            padding:25px;
+            width:280px;
             border-radius:12px;
-            text-align:center;
+            overflow:hidden;
             box-shadow:0 0 12px rgba(0,0,0,0.15);
             transition:0.3s;
+            cursor:pointer;
         }
 
         .card:hover{
@@ -62,7 +63,13 @@
 
         .card img{
             width:100%;
-            border-radius:10px;
+            height:350px;
+            object-fit:cover;
+        }
+
+        .card-content{
+            padding:20px;
+            text-align:center;
         }
 
         footer{
@@ -70,7 +77,7 @@
             color:white;
             text-align:center;
             padding:20px;
-            margin-top:auto; /* THIS keeps it at bottom */
+            margin-top:auto;
         }
     </style>
 </head>
@@ -84,27 +91,33 @@
 <nav>
     <a href="index.html">Home</a>
     <a href="shop.html">Shop</a>
-    <a href="#">Contact</a>
+    <a href="cart.html">Cart 🛒</a>
 </nav>
 
 <section class="products">
 
-    <div class="card">
-        <img src="https://via.placeholder.com/400">
-        <h3>DTek Hoodie</h3>
-        <p>₦15,000</p>
+    <div class="card" onclick="openProduct('hoodie')">
+        <img src="https://via.placeholder.com/400x500">
+        <div class="card-content">
+            <h3>DTek Hoodie</h3>
+            <p>₦15,000</p>
+        </div>
     </div>
 
-    <div class="card">
-        <img src="https://via.placeholder.com/400">
-        <h3>DTee</h3>
-        <p>₦8,000</p>
+    <div class="card" onclick="openProduct('tee')">
+        <img src="https://via.placeholder.com/400x500">
+        <div class="card-content">
+            <h3>DTee</h3>
+            <p>₦8,000</p>
+        </div>
     </div>
 
-    <div class="card">
-        <img src="https://via.placeholder.com/400">
-        <h3>Oversized DTee</h3>
-        <p>₦10,000</p>
+    <div class="card" onclick="openProduct('oversized')">
+        <img src="https://via.placeholder.com/400x500">
+        <div class="card-content">
+            <h3>Oversized DTee</h3>
+            <p>₦10,000</p>
+        </div>
     </div>
 
 </section>
@@ -112,6 +125,12 @@
 <footer>
     <p>© 2026 DTekWear</p>
 </footer>
+
+<script>
+    function openProduct(id){
+        window.location.href = "product.html?id=" + id;
+    }
+</script>
 
 </body>
 </html>
