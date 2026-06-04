@@ -58,23 +58,31 @@
             color:white;
             text-decoration:none;
             border-radius:5px;
+            cursor:pointer;
         }
 
+        /* PRODUCTS (HIDDEN FIRST) */
         .products{
-            display:flex;
+            display:none;
             justify-content:center;
-            gap:20px;
+            gap:30px;
             flex-wrap:wrap;
-            padding:50px;
+            padding:60px;
         }
 
+        /* BIGGER PRODUCT CARDS */
         .card{
             background:white;
-            width:250px;
-            padding:20px;
-            border-radius:10px;
+            width:320px;
+            padding:25px;
+            border-radius:12px;
             text-align:center;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            box-shadow:0 0 12px rgba(0,0,0,0.15);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:scale(1.05);
         }
 
         .card img{
@@ -95,7 +103,7 @@
 <body>
 
 <header>
-    <h1>DTEKTION</h1>
+    <h1>DTEKWEAR</h1>
     <p>Premium Streetwear</p>
 </header>
 
@@ -109,25 +117,27 @@
     <h1>New Collection Out Now</h1>
     <p>Elevate your swag with DTekWear.</p>
 
-    <a class="btn" href="#">Shop Now</a>
+    <!-- SHOP BUTTON -->
+    <a class="btn" onclick="showProducts()">Shop Now</a>
 </section>
 
+<!-- PRODUCTS -->
 <section class="products">
 
     <div class="card">
-        <img src="https://via.placeholder.com/250">
+        <img src="https://via.placeholder.com/400">
         <h3>DTek Hoodie</h3>
         <p>₦15,000</p>
     </div>
 
     <div class="card">
-        <img src="https://via.placeholder.com/250">
+        <img src="https://via.placeholder.com/400">
         <h3>DTee</h3>
         <p>₦8,000</p>
     </div>
 
     <div class="card">
-        <img src="https://via.placeholder.com/250">
+        <img src="https://via.placeholder.com/400">
         <h3>Oversized DTee</h3>
         <p>₦10,000</p>
     </div>
@@ -135,8 +145,15 @@
 </section>
 
 <footer>
-    <p>© 2026 DTek Clothing</p>
+    <p>© 2026 DTekWear</p>
 </footer>
+
+<script>
+    function showProducts(){
+        document.querySelector(".products").style.display = "flex";
+        document.querySelector(".products").scrollIntoView({behavior:"smooth"});
+    }
+</script>
 
 </body>
 </html>
